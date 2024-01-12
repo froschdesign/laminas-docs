@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ComponentCard from "../components/ComponentCard.astro";
+import TableOfContents from "../components/TableOfContents.astro";
+import { slugify } from '../functions/slugify';
+
+// Data
+import components from '../contents/component-lists/mvc.json';
+components.sort((a, b) => (a.group > b.group) - (a.group < b.group));
+
+const groupedComponents = components.reduce((acc, component) => {
+    if (!acc[component.group]) {
+        acc[component.group] = [];
+    }
+    acc[component.group].push(component);
+    return acc;
+}, {});
+
+const groups = Object.keys(groupedComponents).sort();
+---
+
+<Layout title="MVC" bodyClass="mvc mvc-overview">
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <h1 class="header__title">
+                        MVC
+                    </h1>
+                </div>
+                <div class="col-md-6 text-right">
+                    <a href="https://github.com/laminas/" class="header__link header__link--github" title="Go to repository of Laminas MVC">
+                        <i class="fa fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <main class="col-sm-12 content">
+                <h3 class="display-4">Documentation of MVC<br>
+                    <small class="text-muted">MVC for Enterprise Applications</small>
+                </h3>
+                <hr>
+
+                <TableOfContents groups={groups} />
+
+                {Object.entries(groupedComponents).map(([group, components]) => { return (
+                    <h4 id={slugify(group)}>{group}</h4>
+                    <div class="row row-cols-1 row-cols-md-2">
+                        {components.map((component) => { return (
+                            <ComponentCard name={component.name} body={component.description} repository={component.package} href={component.url} />
+                        )})}
+                    </div>
+                )})}
+
+            </main>
+        </div>
+    </div>
+</Layout>

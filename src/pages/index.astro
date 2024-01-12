@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Laminas Documentation" bodyClass="docs-overview" description="Overview of the documentation for Laminas subprojects.">
+    <main>
+        <header class="header">
+            <div class="container">
+                <h1 class="header__title">
+                    Overview
+                </h1>
+            </div>
+        </header>
+    </main>
+
+    <div class="container flex-grow-1">
+        <div class="row">
+            <main class="col-sm-12 content">
+                <h3 class="display-4">Laminas Documentation</h3>
+                <hr>
+
+                <div class="card-deck">
+                    <div class="mezzio card text-center">
+                        <div class="card-header">
+                            <a href="https://docs.mezzio.dev/" class="stretched-link">
+                                <img src="img/laminas-mezzio-rgb.svg" alt="Mezzio">
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Mezzio</h5>
+                            <p class="card-text">PSR-15 Middleware in Minutes</p>
+                        </div>
+                        <div class="card-footer text-muted">previously Expressive</div>
+                    </div>
+                    <div class="components card text-center">
+                        <div class="card-header">
+                            <a href="/components" class="stretched-link">
+                                <img src="img/laminas-components-rgb.svg" alt="Components">
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Components</h5>
+                            <p class="card-text">Components for Enterprise Applications</p>
+                        </div>
+                    </div>
+                    <div class="mvc card text-center">
+                        <div class="card-header">
+                            <a href="/mvc" class="stretched-link">
+                                <img src="img/laminas-mvc-rgb.svg" alt="MVC">
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">MVC</h5>
+                            <p class="card-text">MVC for Enterprise Applications</p>
+                        </div>
+                    </div>
+                    <div class="api-tools card text-center">
+                        <div class="card-header">
+                            <a href="https://api-tools.getlaminas.org/" class="stretched-link">
+                                <img src="img/laminas-api-tools-rgb.svg" alt="API Tools">
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">API Tools</h5>
+                            <p class="card-text">Build RESTful APIs in Minutes</p>
+                        </div>
+                        <div class="card-footer text-muted">previously Apigility</div>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="card-deck">
+                    <div class="card">
+                        <a href="/migration/" class="overview">
+                            <div class="card-body">
+                                <h5 class="card-title">Migration</h5>
+                                <p class="card-text">
+                                    Migrate your application or library to
+                                    Laminas from Zend Framework, Expressive, or
+                                    Apigility
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="/tutorials/" class="overview">
+                            <div class="card-body">
+                                <h5 class="card-title">Tutorials</h5>
+                                <p class="card-text">
+                                    Learn how to create laminas-mvc applications,
+                                    get in-depth guides into components, and
+                                    discover how to migrate your applications to
+                                    version 3!
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</Layout>
+
+<style>
+</style>

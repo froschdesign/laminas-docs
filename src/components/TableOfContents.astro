@@ -1,0 +1,20 @@
+---
+import { slugify } from '../functions/slugify';
+
+interface Props {
+    groups: string[];
+}
+
+const { groups } = Astro.props;
+---
+
+<div class="toc">
+    <h6 class="toc__headline">On this page</h6>
+    <ul class="toc__list">
+        {groups.map(group => (
+            <li class="toc__entry">
+                <a href={`#${slugify(group)}`} class="toc__link nav-link">{group}</a>
+            </li>
+        ))
+    </ul>
+</div>

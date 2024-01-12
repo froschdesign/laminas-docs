@@ -1,0 +1,54 @@
+.page-nav {
+    list-style-type: none;
+    border-bottom: 1px solid darken($separater-color, 10%);
+    display: table;
+    width: 100%;
+    margin-top: map_get($spacers, 3);
+    margin-bottom: map_get($spacers, 3);
+    padding: 0 0 map_get($spacers, 3);
+
+    @include media-breakpoint-down(sm) {
+        margin-top: map_get($spacers, 3);
+        margin-bottom: 0
+    }
+
+    &__item {
+        display: table-cell;
+
+        &:last-child {
+            text-align: right;
+        }
+    }
+
+    &__link {
+        border: none;
+        color: lighten($body-color, 15%);
+
+        &:link,
+        &:visited {
+            text-decoration: none !important;
+        }
+
+        &:hover {
+            text-decoration: underline;
+            color: $link-color;
+        }
+
+        &--prev {
+            & .page-nav__label {
+                margin-left: 15px;
+            }
+        }
+
+        &--next {
+            & .page-nav__label {
+                margin-right: 15px;
+            }
+        }
+    }
+
+    &__title,
+    &__label {
+        display: block;
+    }
+}

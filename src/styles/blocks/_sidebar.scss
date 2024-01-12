@@ -1,0 +1,7 @@
+.sidebar {
+    margin-top: map_get($spacers, 5);
+
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+}

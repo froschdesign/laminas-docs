@@ -1,0 +1,25 @@
+.card {
+    border-top: 2px solid var(--primary-color);
+    transition: all 0.15s ease-out;
+
+    a {
+        &:link,
+        &:visited {
+            text-decoration: none !important;
+        }
+    }
+
+    &:hover {
+        background-color: var(--primary-color);
+        text-decoration: none;
+
+        &,
+        .text-muted {
+            color: white !important;
+        }
+
+        img {
+            filter: brightness(0) invert(1);
+        }
+    }
+}

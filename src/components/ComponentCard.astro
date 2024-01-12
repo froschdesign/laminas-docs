@@ -1,0 +1,24 @@
+---
+interface Props {
+    name: string;
+    repository: string;
+    body: string;
+    href: string;
+}
+
+const { name, body, repository, href } = Astro.props;
+---
+
+<div class="col mb-4">
+    <div class="card h-100">
+        <div class="card-header">
+            <a href={href} class="stretched-link">
+                {repository}
+            </a>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{name}</h5>
+            <p class="card-text">{body}</p>
+        </div>
+    </div>
+</div>

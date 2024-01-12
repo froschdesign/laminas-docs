@@ -1,0 +1,51 @@
+.tabbed {
+    &-set {
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        margin-top: map_get($spacers, 3);
+
+        .tabbed-content {
+            display: none;
+            order: 99;
+            width: 100%;
+
+            pre {
+                margin-top: 0;
+            }
+        }
+
+        label {
+            width: auto;
+            color: #6d6c6c;
+            background-color: #eee;
+            margin-right: 3px;
+            margin-bottom: 0;
+            padding: .5rem 1rem;
+            cursor: pointer;
+
+            &:hover {
+                background-color: darken(#eee, 30%);
+                color: white;
+            }
+        }
+
+        input {
+            position: absolute;
+            opacity: 0;
+
+            &:nth-child(n+1) {
+                color: #333;
+            }
+
+            &:nth-child(n+1):checked + label {
+                color: white;
+                background-color: #3c4146;
+            }
+
+            &:nth-child(n+1):checked + label + .tabbed-content {
+                display: block;
+            }
+        }
+    }
+}

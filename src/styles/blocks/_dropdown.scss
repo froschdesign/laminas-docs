@@ -1,0 +1,21 @@
+.dropdown {
+    @include media-breakpoint-up(lg) {
+        &:hover > .dropdown-menu {
+            display: block;
+        }
+    }
+
+    .dropdown-item {
+        @include media-breakpoint-down(xs) {
+            white-space: initial;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        &.show {
+            .dropdown-menu {
+                display: block;
+            }
+        }
+    }
+}
