@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="Laminas Documentation" bodyClass="docs-overview" description="Overview of the documentation for Laminas subprojects.">
@@ -23,7 +25,7 @@ import Layout from '../layouts/Layout.astro';
                     <div class="mezzio card text-center">
                         <div class="card-header">
                             <a href="https://docs.mezzio.dev/" class="stretched-link">
-                                <img src="img/laminas-mezzio-rgb.svg" alt="Mezzio">
+                                <img src={`${base}/img/laminas-mezzio-rgb.svg`} alt="Mezzio">
                             </a>
                         </div>
                         <div class="card-body">
@@ -34,8 +36,8 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                     <div class="components card text-center">
                         <div class="card-header">
-                            <a href="/components" class="stretched-link">
-                                <img src="img/laminas-components-rgb.svg" alt="Components">
+                            <a href={`${base}/components`} class="stretched-link">
+                                <img src={`${base}/img/laminas-components-rgb.svg`} alt="Components">
                             </a>
                         </div>
                         <div class="card-body">
@@ -45,8 +47,8 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                     <div class="mvc card text-center">
                         <div class="card-header">
-                            <a href="/mvc" class="stretched-link">
-                                <img src="img/laminas-mvc-rgb.svg" alt="MVC">
+                            <a href={`${base}/mvc`} class="stretched-link">
+                                <img src={`${base}/img/laminas-mvc-rgb.svg`} alt="MVC">
                             </a>
                         </div>
                         <div class="card-body">
@@ -57,7 +59,7 @@ import Layout from '../layouts/Layout.astro';
                     <div class="api-tools card text-center">
                         <div class="card-header">
                             <a href="https://api-tools.getlaminas.org/" class="stretched-link">
-                                <img src="img/laminas-api-tools-rgb.svg" alt="API Tools">
+                                <img src={`${base}/img/laminas-api-tools-rgb.svg`} alt="API Tools">
                             </a>
                         </div>
                         <div class="card-body">
@@ -71,7 +73,7 @@ import Layout from '../layouts/Layout.astro';
 
                 <div class="card-deck">
                     <div class="card">
-                        <a href="/migration/" class="overview">
+                        <a href={`${base}/migration/`} class="overview">
                             <div class="card-body">
                                 <h5 class="card-title">Migration</h5>
                                 <p class="card-text">
@@ -83,7 +85,7 @@ import Layout from '../layouts/Layout.astro';
                         </a>
                     </div>
                     <div class="card">
-                        <a href="/tutorials/" class="overview">
+                        <a href={`${base}/tutorials/`} class="overview">
                             <div class="card-body">
                                 <h5 class="card-title">Tutorials</h5>
                                 <p class="card-text">

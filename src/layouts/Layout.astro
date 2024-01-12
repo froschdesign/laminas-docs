@@ -8,6 +8,8 @@ interface Props {
 }
 
 const {title, bodyClass, description} = Astro.props;
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
@@ -16,7 +18,7 @@ const {title, bodyClass, description} = Astro.props;
     <meta charset="UTF-8"/>
     <meta name="description" content={description}/>
     <meta name="viewport" content="width=device-width"/>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`}/>
     <title>{title}</title>
 </head>
 <body id="page-top" class={bodyClass} data-spy="scroll" data-target=".toc" data-offset="120">
@@ -51,7 +53,7 @@ const {title, bodyClass, description} = Astro.props;
                             <a href="https://docs.mezzio.dev/" class="dropdown-item">
                                 <div class="row align-items-center">
                                     <div class="col-md-4 col-sm-12">
-                                        <img src="/img/laminas-mezzio-rgb.svg" alt="Laminas Mezzio">
+                                        <img src={`${base}/img/laminas-mezzio-rgb.svg`} alt="Laminas Mezzio">
                                     </div>
                                     <div class="col-md-8 col-sm-12">
                                         <strong>Mezzio</strong><br>
@@ -62,7 +64,7 @@ const {title, bodyClass, description} = Astro.props;
                             <a href="https://docs.laminas.dev/components/" class="dropdown-item">
                                 <div class="row align-items-center">
                                     <div class="col-md-4 col-sm-12">
-                                        <img src="/img/laminas-components-rgb.svg" alt="Laminas Components">
+                                        <img src={`${base}/img/laminas-components-rgb.svg`} alt="Laminas Components">
                                     </div>
                                     <div class="col-md-8 col-sm-12">
                                         <strong>Components</strong><br>
@@ -73,7 +75,7 @@ const {title, bodyClass, description} = Astro.props;
                             <a href="https://docs.laminas.dev/mvc" class="dropdown-item">
                                 <div class="row align-items-center">
                                     <div class="col-md-4 col-sm-12">
-                                        <img src="/img/laminas-mvc-rgb.svg" alt="Laminas MVC">
+                                        <img src={`${base}/img/laminas-mvc-rgb.svg`} alt="Laminas MVC">
                                     </div>
                                     <div class="col-md-8 col-sm-12">
                                         <strong>MVC</strong><br>
@@ -84,7 +86,7 @@ const {title, bodyClass, description} = Astro.props;
                             <a href="https://api-tools.getlaminas.org/documentation" class="dropdown-item">
                                 <div class="row align-items-center">
                                     <div class="col-md-4 col-sm-12">
-                                        <img src="/img/laminas-api-tools-rgb.svg" alt="Laminas API Tools">
+                                        <img src={`${base}/img/laminas-api-tools-rgb.svg`} alt="Laminas API Tools">
                                     </div>
                                     <div class="col-md-8 col-sm-12">
                                         <strong>API Tools</strong><br>
@@ -176,7 +178,7 @@ const {title, bodyClass, description} = Astro.props;
     </div>
 </footer>
 
-<script src="/js/scripts.js" is:inline></script>
+<script src={`${base}/js/scripts.js`} is:inline></script>
 <script>
     let base_url = '/',
         project = 'overview',
