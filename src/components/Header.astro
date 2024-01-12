@@ -1,0 +1,35 @@
+---
+interface Props {
+    title: string;
+    link?: string;
+    linkTitle?: string;
+}
+
+const {title, link = null, linkTitle = null} = Astro.props;
+---
+
+<header class="header">
+    <div class="container">
+        {link &&
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <h1 class="header__title">
+                        {title}
+                    </h1>
+                </div>
+                <div class="col-md-6 text-right">
+                    <a href={link}
+                       class="header__link header__link--github"
+                       title={linkTitle}>
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        }
+        {!link &&
+            <h1 class="header__title">
+                {title}
+            </h1>
+        }
+    </div>
+</header>

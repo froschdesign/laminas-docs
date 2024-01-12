@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import ComponentCard from "../components/ComponentCard.astro";
 import TableOfContents from "../components/TableOfContents.astro";
+import Header from "../components/Header.astro";
 import { slugify } from '../functions/slugify';
 
 // Data
@@ -20,22 +21,8 @@ const groups = Object.keys(groupedComponents).sort();
 ---
 
 <Layout title="MVC" bodyClass="mvc mvc-overview">
-    <header class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-12">
-                    <h1 class="header__title">
-                        MVC
-                    </h1>
-                </div>
-                <div class="col-md-6 text-right">
-                    <a href="https://github.com/laminas/" class="header__link header__link--github" title="Go to repository of Laminas MVC">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
+
+    <Header title="MVC" link="https://github.com/laminas/" linkTitle="Go to repository of Laminas MVC" />
 
     <div class="container">
         <div class="row">
