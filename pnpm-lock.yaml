@@ -17,9 +17,6 @@ dependencies:
   choices.js:
     specifier: ^9.0.1
     version: 9.1.0
-  font-awesome:
-    specifier: ^4.7.0
-    version: 4.7.0
   jquery:
     specifier: ^3.6.0
     version: 3.7.1
@@ -1691,11 +1688,6 @@ packages:
     dependencies:
       micromatch: 4.0.5
       pkg-dir: 4.2.0
-    dev: false
-
-  /font-awesome@4.7.0:
-    resolution: {integrity: sha512-U6kGnykA/6bFmg1M/oT9EkFeIYv7JlX3bozwQJWiiLz6L0w3F5vBVPxHlwyX/vtNq1ckcpRKOB9f2Qal/VtFpg==}
-    engines: {node: '>=0.10.3'}
     dev: false
 
   /fs-constants@1.0.0:
